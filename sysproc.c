@@ -89,3 +89,30 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+/*
+*  Código do Passo 1
+*/
+int
+sys_date(void)
+{
+  char *ptr;
+  argptr(0, &ptr, sizeof(struct rtcdate*));
+  // seu código aqui
+  return 0;
+}
+
+// // Fetch the nth 32-bit system call argument.
+// int argint(int n, int *ip);
+ 
+// // Fetch the nth word-sized system call argument as a pointer
+// // to a block of memory of size bytes.  Check that the pointer
+// // lies within the process address space.
+// int argptr(int n, char **pp, int size);
+ 
+// // Fetch the nth word-sized system call argument as a string pointer.
+// // Check that the pointer is valid and the string is nul-terminated.
+// // (There is no shared writable memory, so the string can't change
+// // between this check and being used by the kernel.)
+// int argstr(int n, char **pp);
+
