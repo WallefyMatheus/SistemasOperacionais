@@ -6,6 +6,7 @@
 #include "memlayout.h"
 #include "mmu.h"
 #include "proc.h"
+#include "time.h"
 
 int
 sys_fork(void)
@@ -91,15 +92,25 @@ sys_uptime(void)
 }
 
 /*
-*  Código do Passo 1
+*  Código do Passo 1 - função de data
 */
 int
 sys_date(void)
 {
   char *ptr;
   argptr(0, &ptr, sizeof(struct rtcdate*));
-  // seu código aqui
+
   return 0;
+}
+
+/*
+*  Código de time
+*/
+int time_system;
+int
+sys_time(void)
+{ 
+  return time_system;
 }
 
 // // Fetch the nth 32-bit system call argument.

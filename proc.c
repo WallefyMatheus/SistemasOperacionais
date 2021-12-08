@@ -6,6 +6,7 @@
 #include "x86.h"
 #include "proc.h"
 #include "spinlock.h"
+#include "time.h"
 
 struct {
   struct spinlock lock;
@@ -531,4 +532,12 @@ procdump(void)
     }
     cprintf("\n");
   }
+}
+
+int time_system;
+
+int
+time()
+{
+  return time_system;
 }
