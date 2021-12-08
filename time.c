@@ -17,6 +17,7 @@ executar(char ** argumento)
 void 
 test_user()
 {
+  printf(stderr, "\n");
   printf(stderr, "USER TESTS INIT!\n");
   printf(stderr, ".\n");
   printf(stderr, ".\n");
